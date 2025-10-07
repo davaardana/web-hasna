@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Hasna 💕</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd6e8, #ffeefc);
+      position: relative;
+    }
+
+    /* Background bunga & love dreamy */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+      height: 120%;
+      background: url('https://i.ibb.co/5x2cKtvS/6731414-C-DF59-4-C89-B6-E3-976-E071060-E0.jpg') center/cover no-repeat;
+      filter: brightness(0.9) blur(1px);
+      animation: moveBg 15s infinite alternate ease-in-out;
+      z-index: -1;
+    }
+
+    @keyframes moveBg {
+      from { transform: scale(1.05) rotate(0deg); }
+      to { transform: scale(1.15) rotate(2deg); }
+    }
+
+    .container {
+      text-align: center;
+      color: #ff3d6e;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 100, 150, 0.4);
+      backdrop-filter: blur(10px);
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2.3em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .love-button {
+      background: radial-gradient(circle, #ff89b5, #ff3d6e);
+      border: none;
+      color: white;
+      font-size: 2.2em;
+      border-radius: 50%;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.4s;
+      animation: pulse 1.5s infinite;
+    }
+
+    .love-button:hover {
+      transform: scale(1.2);
+      background: radial-gradient(circle, #ff6fa5, #ff1d58);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s, transform 1s;
+    }
+
+    .message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: floatUp 4s ease-in-out forwards;
+      color: #ff2e63;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to { opacity: 0; transform: translateY(-200px) scale(1.5); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hai Hasna 💖</h1>
+    <p style="font-size:1.1em;">Semangat ya jalanin hari-hari kamu, Na 🌷</p>
+    <div class="message show" id="message">
+      <p>
+        Dava di sini bakalan bantu kamu di banyak hal 🤍<br>
+        Jangan suka sedih ya — kalau emang sedih, cerita aja<br>
+        Dava siap jadi pendengar yang baik buat Hasna 💫<br>
+        Satu lagi... nggak boleh cengeng 😚<br><br>
+        <strong>I'M ALWAYS BESIDE U 💞</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Lagu otomatis YouTube -->
+  <iframe 
+    width="0" 
+    height="0" 
+    src="https://www.youtube.com/embed/Cykwx8WYkDg?autoplay=1&loop=1&playlist=Cykwx8WYkDg"
+    frameborder="0" 
+    allow="autoplay; encrypted-media">
+  </iframe>
+
+  <script>
+    // Efek hati naik pelan-pelan terus muncul tiap beberapa detik
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '💖';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
